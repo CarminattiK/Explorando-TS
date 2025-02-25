@@ -1,5 +1,8 @@
+// 1- Array criado com o intuito de armazenar todas as naves que serão registradas
+
 let naves = []
 
+// 2- Função com o objetivo de salvar toda nova nave
 function salvarNave(nome: string, piloto: string, tamanhoMaxTripulacao: number) {
     const espacoNave = {
         nome,
@@ -23,6 +26,8 @@ function salvarNave(nome: string, piloto: string, tamanhoMaxTripulacao: number) 
     return espacoNave
 };
 
+// 3- Função para encontrar uma nave pelo nome.
+// !! Inicalmente a ideia era fazer pelo indice de cada nave salva, mas vi posteriormente que deveria ser feito dessa forma e corrigi.
 function encontrarNave(nome: string) {
     let espacoNave: {
         nome: string,
@@ -38,6 +43,7 @@ function encontrarNave(nome: string) {
     
 }
 
+// 4- Função para adicionar um novo membro à tripulação da nave
 function addNovoMembro(membro: string, espacoNave: { nome: string, tamanhoMaxTripulacao: number, tripulacao: string[] }) {
     if (espacoNave.tripulacao.length >= espacoNave.tamanhoMaxTripulacao) {
       alert(`ERROR! ${membro} não pode ser adicionado à tripulação. O limite de membros foi atingido.`)
@@ -48,6 +54,7 @@ function addNovoMembro(membro: string, espacoNave: { nome: string, tamanhoMaxTri
     }
 }
 
+//5- Função para enviar uma nave para missão (caso ela já não esteja)
 function enviarParaMissao(espacoNave: { nome: string, tamanhoMaxTripulacao: number, tripulacao: string[], emMissao: boolean }) {
   if (espacoNave.emMissao) {
     alert(`Ocorreu um erro! ${espacoNave.nome} não pode ser enviada. A nave já está em missão.`)
@@ -60,6 +67,7 @@ function enviarParaMissao(espacoNave: { nome: string, tamanhoMaxTripulacao: numb
   }
 }
 
+// 6- Primeira opção do menuzinho interativo: Cadastrar uma nova nave
 function primeiraOpcaoDoMenu() {
   const nome = prompt('Qual nome você gostaria de colocar na nave??')
   const piloto = prompt(`Qual seria o nome do(a) piloto(a) da ${nome}`)
@@ -72,6 +80,7 @@ function primeiraOpcaoDoMenu() {
   }
 }
 
+// 7- Segunda opção do menu: Adicionar um novo membro à tripulação
 function segundaOpcaoDoMenu() {
     const membro = prompt('Qual é o nome do tripulante?')
     const nomeDaNave = prompt(`Para qual nave ${membro} deverá ser designado?`)
@@ -87,6 +96,7 @@ function segundaOpcaoDoMenu() {
     }
   }
 
+  // 8- Terceira opção do menu: Enviar nave para missão
   function terceiraOpcaoDoMenu() {
     const nomeDaNave = prompt('Qual é o nome da nave a ser enviada?')
   
@@ -101,6 +111,7 @@ function segundaOpcaoDoMenu() {
     }
   }
 
+  // 9- Quarta opção do menu: Listar todas as naves registradas
   function quartaOpcaoDoMenu() {
     let lista = 'Naves Registradas:\n'
   
@@ -130,6 +141,7 @@ function segundaOpcaoDoMenu() {
 
 let opcoesDeUsuario = 0;
 
+// 10- Loop principal do menu de opções
 while (opcoesDeUsuario !== 5) {
   const menu = `Painel Principal
     1 - Salvar uma nova nave
