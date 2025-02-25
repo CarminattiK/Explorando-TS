@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "Praticando-tipagem/dist",
+        "outDir": "Praticando-tipaagem/dist",
         "target": "ESNext",
     }
 }
