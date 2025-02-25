@@ -1,0 +1,24 @@
+{
+  "name": "explorando-ts",
+  "version": "1.0.0",
+  "description": "Bem-vindo ao meu repositório! Aqui, estou documentando minha jornada de aprendizado em **TypeScript**, explorando conceitos fundamentais e aplicando-os na prática.",
+  "main": "index.js",
+  "scripts": {
+    "tsc-watch": "tsc", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarminattiK/Explorando-TS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarminattiK/Explorando-TS/issues"
+  },
+  "homepage": "https://github.com/CarminattiK/Explorando-TS#readme",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
